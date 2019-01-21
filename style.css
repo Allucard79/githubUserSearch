@@ -1,0 +1,38 @@
+* {box-sizing: border-box; }
+
+body {
+    text-align: center;
+    background-image: url('git.jpg');
+    color: aliceblue;
+    margin: 150px;
+}
+
+label {
+    font-size: 44px;
+}
+
+input {
+    font-size: 36px;
+}
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.user {
+    padding: 10px;
+}
+
+.image {
+    border-radius: 50%;
+}
+
+a {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
