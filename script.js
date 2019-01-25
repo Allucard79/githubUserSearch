@@ -6,6 +6,7 @@ class App extends React.Component {
             users: []
         };
         this.onChangeHandle=this.onChangeHandle.bind(this);
+        this.onSubmit=this.onSubmit.bind(this);
 }
 
     onChangeHandle(event) {
@@ -24,7 +25,7 @@ class App extends React.Component {
     render() {
         return (
         <div>
-            <form onSubmit={event => this.onSubmit(event)}>
+            <form onSubmit={this.onSubmit}>
                 <label htmlFor="searchText">Search by user name: </label>
                 <input
                     type="text"

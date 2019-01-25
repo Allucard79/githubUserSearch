@@ -21,6 +21,7 @@ var App = function (_React$Component) {
             users: []
         };
         _this.onChangeHandle = _this.onChangeHandle.bind(_this);
+        _this.onSubmit = _this.onSubmit.bind(_this);
         return _this;
     }
 
@@ -47,16 +48,12 @@ var App = function (_React$Component) {
     }, {
         key: "render",
         value: function render() {
-            var _this3 = this;
-
             return React.createElement(
                 "div",
                 null,
                 React.createElement(
                     "form",
-                    { onSubmit: function onSubmit(event) {
-                            return _this3.onSubmit(event);
-                        } },
+                    { onSubmit: this.onSubmit },
                     React.createElement(
                         "label",
                         { htmlFor: "searchText" },
