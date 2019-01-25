@@ -5,6 +5,7 @@ class App extends React.Component {
             searchText: '',
             users: []
         };
+        this.onChangeHandle=this.onChangeHandle.bind(this);
 }
 
     onChangeHandle(event) {
@@ -28,7 +29,7 @@ class App extends React.Component {
                 <input
                     type="text"
                     id="searchText"
-                    onChange={event => this.onChangeHandle(event)}
+                    onChange={this.onChangeHandle}
                 value={this.state.searchText}/>
             </form>
             <UsersList users={this.state.users}/>
@@ -44,7 +45,7 @@ class App extends React.Component {
 
     render() {
         return (
-        <div className={'users'}>
+        <div className='users'>
             {this.users}
         </div>
         );
@@ -54,11 +55,11 @@ class App extends React.Component {
     class User extends React.Component {
         render() {
             return (
-                <div className={'user'}>
-                    <img className={'image'} src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
+                <div className='user'>
+                    <img className='image' src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
                     <div>
                         <h3>user name: </h3>     
-                        <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
+                        <a href={this.props.user.html_url} target='_blank'>{this.props.user.login}</a>
                     </div>
                 </div>
             );
